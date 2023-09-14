@@ -2,6 +2,7 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import LatestMatch from '../LatestMatch'
+import MatchCard from '../MatchCard'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import './index.css'
 
@@ -41,7 +42,14 @@ class TeamMatches extends Component {
             <p className="b-title">Latest Matches</p>
             <LatestMatch latestMatchDetails={latestMatchDetails} />
           </div>
-          <p>,,,</p>
+
+          <div className="bottom-cards-container">
+            <ul>
+              {recentMatches.map(eachM => (
+                <MatchCard key={eachM.id} eachM={eachM} />
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     )
@@ -52,7 +60,9 @@ class TeamMatches extends Component {
     return (
       <div>
         {loading ? (
-          <Loader type="Oval" color="#ffffff" height={50} />
+          <div>
+            <Loader type="Oval" color="#ffffff" height={50} />
+          </div>
         ) : (
           this.renderTeamsMatches()
         )}
