@@ -1,6 +1,28 @@
 /* Write your CSS here */
 .dark-container {
   background: #1e293b;
-  width: 95%;
+  width: 95vw;
+  height: 40vh;
   border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left-column {
+  width: 30%;
+}
+.left {
+  font-size: 15px;
+  display: flex;
+  justify-content: left;
+}
+.right {
+  font-size: 15px;
+  display: flex;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+.center-logo {
+  width: 20%;
 }
