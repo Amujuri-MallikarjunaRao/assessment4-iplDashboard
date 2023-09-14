@@ -1,0 +1,22 @@
+/* Write your CSS here */
+.containerr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d91c1f;
+  background-size: cover;
+}
+.box {
+  margin: 3%;
+  width: 97%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner {
+  width: 100%;
+}
+.b-title {
+  font-size: 10px;
+}
